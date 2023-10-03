@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.diam {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+    display: block;
+}

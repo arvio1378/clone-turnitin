@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Dukung siswa membuat karya tulis asli mereka yang terbaik | Turnitin</title>
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cb30ddf7c8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- header -->
+    <header>
+        <!-- header 1 -->
+        <section>
+            <div class="max-md:flex max-md:flex-col-reverse atas z-50">
+                <div class="flex justify-between items-center py-5 px-12 bg-gray-200 max-lg:text-sm header max-md:hidden max-md:flex-col-reverse">
+                    <div class="flex max-md:w-full max-md:text-right max-md:block">
+                        <div>
+                            <label for="bahasa" class="mx-2">Ubah Bahasa</label>
+                        </div>
+                        <select name="bahasa" id="bahasa" class="max-md:my-2">
+                            <option>English</option>
+                            <option>Asia Pasific (English)</option>
+                            <option>عربي</option>
+                            <option>Deutsch</option>
+                            <option>Español</option>
+                            <option>Français</option>
+                            <option>Bahasa Indonesia</option>
+                            <option>Italiano</option>
+                            <option>日本語</option>
+                            <option>한국어</option>
+                            <option>Nederlands</option>
+                            <option>Português</option>
+                            <option>русский</option>
+                            <option>Türkiye</option>
+                            <option>中文</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center max-md:flex-col max-md:w-full">
+                        <div class="max-md:w-full">
+                            <input type="search" name="cari" id="cari" placeholder="Cari Teks" class="mx-3 py-1 px-3 rounded-2xl max-md:w-full max-md:my-3 outline-none">
+                        </div>
+                        <div class="max-md:w-full max-md:flex max-md:text-left">
+                            <a href="#" class="after:content-['|'] after:text-gray-400 after:mx-2 max-md:text-sky-500">Buat Akun</a>
+                            <a href="#" class="max-md:text-sky-500">Masuk</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- header 2 -->
+                <div class="bg-white flex justify-between items-center text-lg navbar z-50 max-lg:text-sm px-2 max-md:block">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <img src="img/turnitin_logo.png" alt="turnitin_logo" class="w-40" id="logo">
+                        </div>
+                        <div class="hidden max-md:block">
+                            <button class="border-2 border-black rounded-md px-2 py-3" id="btnMenu">Menu</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center text max-md:hidden text-sm max-md:text-lg max-md:overflow-y-auto max-md:h-96">
+                        <div>
+                            <h4 class="mx-3 max-md:my-5 hover:underline cursor-pointer flex justify-between items-center gap-1 h-20 max-md:h-5" id="menuProduk">Produk <i class="fa-solid fa-chevron-down" id="produk"></i></h4>
+                            <!-- dropdown produk -->
+                            <div class="hidden left-0 fixed z-50 bg-white max-md:static" id="drop_produk">
+                                <div class="flex flex-wrap items-center justify-center px-10 py-3 border-t-2 gap-10 z-50">
+                                    <a href="#" class="w-1/6">
+                                        <h4><b>Feedback Studio</b></h4>
+                                        <p class="text-sm">Berikan umpan balik dan nilai tugas dengan perangkat yang mengedepankan keunggulan penulisan dan integritas akademik.</p>
+                                    </a>
+                                    <a href="#" class="w-1/6">
+                                        <h4><b>Gradescope</b></h4>
+                                        <p class="text-sm">Lakukan dan berikan skor pada semua jenis kegiatan penilaian dari manapun menggunakan platform penilaian modern ini.</p>
+                                    </a>
+                                    <a href="#" class="w-1/6">
+                                        <h4><b>iThenticate</b></h4>
+                                        <p class="text-sm">Perangkat pemeriksa plagiarisme tingkat tinggi ini adalah standar emas bagi peneliti dan penerbit akademik.</p>
+                                    </a>
+                                    <a href="#" class="w-1/6">
+                                        <h4><b>Similarity</b></h4>
+                                        <p class="text-sm">Pemeriksa plagiarisme yang komprehensif dan tangguh ini menyesuaikan dengan alur kerja yang sudah ada tanpa kendala.</p>
+                                    </a>
+                                    <a href="#" class="w-1/6">
+                                        <h4><b>Originality</b></h4>
+                                        <p class="text-sm">Tangani orisinalitas pekerjaan siswa dan tren pelanggaran yang kian berkembang dengan solusi komprehensif ini.</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="mx-3 max-md:my-5 hover:underline cursor-pointer flex justify-between items-center gap-1 h-20 max-md:h-5" id="menuSolusi">Solusi <i class="fa-solid fa-chevron-down" id="solusi"></i></h4>
+                            <!-- dropdown solusi -->
+                            <div class="hidden left-0 fixed z-50 bg-white max-md:static" id="drop_solusi">
+                                <div class="flex items-center justify-center px-10 py-3 border-t-2 gap-10 z-50">
+                                    <a href="#" class="w-1/6">
+                                        <h4><b>Pendidikan Tinggi</b></h4>
+                                        <p class="text-sm">Tegakkan integritas akademik, efisienkan penilaian dan umpan balik, dan lindungi reputasi institusi Anda dengan perangkat ini.</p>
+                                    </a>
+                                    <a href="#" class="w-1/6">
+                                        <h4><b>Pendidikan Menengah</b></h4>
+                                        <p class="text-sm">Tingkatkan karya tulis siswa, periksa kesamaan teks, dan bantu kembangkan keterampilan berpikir orisinil dengan perangkat ini bagi para pengajar.</p>
+                                    </a>
+                                    <a href="#" class="w-1/6">
+                                        <h4><b>Riset dan Publikasi</b></h4>
+                                        <p class="text-sm">Terbitkan hasil riset dengan percaya diri menggunakan perangkat yang dipercaya para peneliti dan penerbit untuk memastikan keaslian karya ilmiah.</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="mx-3 max-md:my-5 hover:underline"><a href="#" class="h-20 flex items-center cursor-pointer max-md:h-5">Tentang kami</a></h4>
+                        <h4 class="mx-3 max-md:my-5 hover:underline"><a href="#" class="h-20 flex items-center cursor-pointer max-md:h-5">Sumber</a></h4>
+                        <h4 class="mx-3 max-md:my-5 hover:underline"><a href="#" class="h-20 flex items-center cursor-pointer max-md:h-5">Dukungan</a></h4>
+                        <button class="mx-3 max-md:my-5 bg-green-300 px-3 py-2 shadow-xl hover:bg-green-950 hover:text-green-300 duration-300 rounded-lg">Kontak Penjual</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden max-md:block py-20"></div>
+        </section>
+    </header>
+
+    <!-- body 1 -->
+    <section>
+        <div class="flex justify-between items-center bg-gray-100 p-20 gap-10 max-sm:flex-col max-sm:text-left">
+            <h1 class="text-5xl text-sky-900 w-1/2 max-lg:text-4xl max-sm:w-full">Dorong siswa membuat karya tulis asli mereka yang terbaik</h1>
+            <img src="img/logo-body-1.png" alt="logo-body-1" class="w-1/2 max-sm:w-3/4">
+        </div>
+    </section>
+
+    <!-- body 2 -->
+    <section>
+        <div class="p-20">
+            <h1 class="text-center text-5xl text-sky-900 mb-20 max-lg:text-3xl">Keberhasilan siswa dimulai di sini</h1>
+            <div class="flex justify-between items-center gap-10 max-md:flex-col">
+                <div class="w-1/2 max-md:w-full">
+                    <img src="img/logo-body-2.png" alt="logo-body-2">
+                </div>
+                <div class="w-1/2 max-md:w-full">
+                    <h1 class="leading-tight text-5xl text-sky-900 mb-5 max-lg:text-2xl">Menegakkan integritas akademik</h1>
+                    <p class="text-gray-500 font-semibold">Mengidentifikasi karya tulis tidak asli secara instan dengan membandingkan pekerjaan yang dikumpulkan siswa dengan koleksi konten internet, akademik dan makalah siswa terbesar di dunia. Manfaatkan Similarity Report dari Turnitin yang mudah digunakan untuk melakukan pengecekan pada alur kerja pendidik dan siswa yang mendeteksi dan mencegah plagiarisme, dan tumbuhkan masyarakat berintegritas di institusi Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- body 3 -->
+    <section>
+        <div class="flex justify-between items-center p-20 gap-10 max-md:flex-col-reverse">
+            <div class="w-1/2 max-md:w-full">
+                <h1 class="text-5xl text-sky-900 mb-5 leading-tight max-lg:text-3xl">Mempercepat proses pengujian, penilaian dan pemberian umpan balik</h1>
+                <p class="text-gray-500 font-semibold">Menyelenggarakan dan menilai ujian di lingkungan pembelajaran dan mata kuliah/pelajaran apapun dengan perangkat intuitif penilaian dan umpan balik yang menghemat waktu dari Turnitin. Umpan balik yang lebih berkualitas dan cepat, dipasangkan dengan analitika data real time yang efektif berisi kinerja siswa untuk memberi masukan pada pengembangan kurikulum dan peningkatan hasil belajar. Memangkas setengah dari waktu penilaian sehingga proses penilaian menjadi lebih singkat serta lebih banyak waktu untuk pengajaran.</p>
+            </div>
+            <div class="w-1/2 max-md:w-full">
+                <img src="img/logo-body-3.png" alt="logo-body-3">
+            </div>
+        </div>
+    </section>
+
+    <!-- body 4 -->
+    <section>
+        <div class="flex justify-between items-center p-20 gap-10 max-md:flex-col">
+            <div class="w-1/2 max-md:w-full">
+                <img src="img/logo-body-4.png" alt="logo-body-4">
+            </div>
+            <div class="w-1/2 max-md:w-full">
+                <h1 class="text-5xl text-sky-900 mb-5 leading-tight max-lg:text-3xl">Mendukung pembelajaran siswa</h1>
+                <p class="text-gray-500 font-semibold">Pemeriksaan integritas akademik Turnitin membantu memberikan landasan bagi keaslian dan budaya berpikir kritis yang akan melekat sepanjang hayat. Ubah plagiarisme menjadi momen pengajaran ketika hal tersebut terjadi, dan dorong siswa untuk membuat karya tulis orisinil terbaik mereka. Umpan balik ujian dan perangkat penilaian mendukung umpan balik formatif untuk mengatasi kesenjangan pembelajaran dan meningkatkan pengalaman siswa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- body 5 -->
+    <section>
+        <div class="flex items-center justify-between p-20 gap-10 max-md:flex-col-reverse">
+            <div class="w-1/2 max-md:w-full">
+                <h1 class="text-5xl text-sky-900 mb-5 leading-tight max-lg:text-3xl">Menyelidiki pelanggaran akademik</h1>
+                <p class="text-gray-500 font-semibold">Menjaga reputasi institusi Anda dengan perangkat canggih investigasi penulis yang menghalau praktek kecurangan akademik baru dan yang sedang berkembang, dari plagiarisme kode komputer hingga jasa joki. Lengkapi staf dengan teknologi untuk membuktikan upaya-upaya kecurangan dan dukung pengambilan keputusan.</p>
+            </div>
+            <div>
+                <img src="img/logo-body-5.png" alt="logo-body-5">
+            </div>
+        </div>
+    </section>
+
+    <!-- terkini -->
+    <section>
+        <div class="py-20">
+            <h1 class="text-5xl text-sky-900 mb-5 leading-tight text-center">Yang Terkini</h1>
+            <div class="flex flex-wrap justify-center gap-10 max-md:flex-col">
+                <div class="rounded-md w-1/4 max-lg:w-1/3 border relative group max-md:mx-auto max-md:w-1/2">
+                    <a href="#">
+                        <img src="img/logo-terkini-1.jpeg" alt="logo-terkini-1" class="rounded-t-md">
+                        <div class="p-5">
+                            <p class="opacity-50">Webinar</p>
+                            <p class="text-lg"><b>EVEN TERDAHULU:</b> Rekaman Tersedia</p>
+                            <h2 class="text-2xl text-sky-900 my-3">Mengapa Kita Harus Peduli Membangun Integritas Akademik Pada Mahasiswa Sedini Mungkin?</h2>
+                            <p class="mb-5">Perguruan tinggi memiliki tanggung jawab besar untuk mencetak mahasiswa yang secara sah sukses mencapai hasil belajar dimana mereka telah diuji dan memenuhi persyaratan kelulusan.</p>
+                        </div>
+                        <div class="bg-green-300 absolute bottom-0 w-full text-center p-2">
+                            <a href="#" class="bg-green-300 hidden group-hover:block">Ketahui Lebih Jauh</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="rounded-md w-1/4 max-lg:w-1/3 border relative group max-md:mx-auto max-md:w-1/2">
+                    <a href="#">
+                        <img src="img/logo-terkini-2.jpeg" alt="logo-terkini-2" class="rounded-t-md">
+                        <div class="p-5">
+                            <p class="opacity-50">eBuku</p>
+                            <h2 class="text-2xl text-sky-900 my-3">Integritas Akademik 101</h2>
+                            <p class="mb-5">Institusi memiliki tanggung jawab besar untuk mencetak siswa-siswa yang secara sah sukses mencapai hasil belajar di mana mereka diuji dan memenuhi persyaratan kelulusan.</p>
+                        </div>
+                        <div class="bg-green-300 absolute bottom-0 w-full text-center p-2">
+                            <a href="#" class="bg-green-300 hidden group-hover:block">Ketahui Lebih Jauh</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="rounded-md w-1/4 max-lg:w-1/3 border relative group max-md:mx-auto max-md:w-1/2">
+                    <a href="#">
+                        <img src="img/logo-terkini-3.jpeg" alt="logo-terkini-3" class="rounded-t-md">
+                        <div class="p-5">
+                            <p class="opacity-50">Studi Kasus</p>
+                            <h2 class="text-2xl text-sky-900 my-3">Pengaruh besar Universitas Pelita Harapan terhadap kehidupan lebih dari 14.000 mahasiswanya</h2>
+                            <p class="mb-5">Dalam studi kasus ini, kami melihat penerapan Originality Check oleh Universitas Pelita Harapan (UPH), yang telah menghemat waktu dosen dan menegakkan integritas tesis dan makalah penelitian.</p>
+                        </div>
+                        <div class="bg-green-300 absolute bottom-0 w-full text-center p-2">
+                            <a href="#" class="bg-green-300 hidden group-hover:block">Ketahui Lebih Jauh</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section>
+        <div class="bg-green-950 text-white flex items-center flex-wrap p-20 max-md:flex-col">
+            <div class="w-1/3 max-lg:w-1/2 p-5 max-md:w-full">
+                <h2 class="text-2xl mb-5">Feedback Studio</h2>
+                <p class="text-lg mb-10">Tangani integritas akademik, efisienkan penilaian, dan dukung umpan balik untuk mencapai keunggulan karya tulis.</p>
+                <a href="#" class="bg-green-300 text-black px-5 py-3 rounded-md hover:bg-green-950 duration-200 hover:text-green-300">Ketahui Lebih Jauh</a>
+            </div>
+            <div class="w-1/3 max-lg:w-1/2 p-5 max-md:w-full">
+                <h2 class="text-2xl mb-5">Similarity</h2>
+                <p class="text-lg mb-10">Jadikan integritas akademik bagian dari alur kerja Anda dengan pemeriksa plagiarisme yang dipercaya oleh pendidik di seluruh dunia.</p>
+                <a href="#" class="bg-green-300 text-black px-5 py-3 rounded-md hover:bg-green-950 duration-200 hover:text-green-300">Ketahui Lebih Jauh</a>
+            </div>
+            <div class="w-1/3 max-lg:w-1/2 p-5 max-md:w-full">
+                <h2 class="text-2xl mb-5">iThenticate</h2>
+                <p class="text-lg mb-10">Periksa plagiarisme dengan perangkat yang dipercaya penerbit akademik agar dapat melakukan publikasi dengan percaya diri.</p>
+                <a href="#" class="bg-green-300 text-black px-5 py-3 rounded-md hover:bg-green-950 duration-200 hover:text-green-300">Ketahui Lebih Jauh</a>
+            </div>
+            <div class="w-1/3 max-lg:w-1/2 p-5 max-md:w-full">
+                <h2 class="text-2xl mb-5">Originality</h2>
+                <p class="text-lg mb-10">Standar baru dalam integritas akademik untuk mengatasi tren pelanggaran terkini dan memastikan keaslian karya tulis.</p>
+                <a href="#" class="bg-green-300 text-black px-5 py-3 rounded-md hover:bg-green-950 duration-200 hover:text-green-300">Ketahui Lebih Jauh</a>
+            </div>
+            <div class="w-1/3 max-lg:w-1/2 p-5 max-md:w-full">
+                <h2 class="text-2xl mb-5">Gradescope</h2>
+                <p class="text-lg mb-10">Lakukan penilaian dan berikan skor pada tugas sambil menghemat waktu dan mengubah proses penilaian menjadi pembelajaran.</p>
+                <a href="#" class="bg-green-300 text-black px-5 py-3 rounded-md hover:bg-green-950 duration-200 hover:text-green-300">Ketahui Lebih Jauh</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- sumber -->
+    <section>
+        <div class="py-20">
+            <div>
+                <h1 class="text-5xl text-sky-900 text-center mb-5">Sumber</h1>
+                <p class="text-center w-3/4 mx-auto text-lg">Turnitin bermitra dengan para pendidik dunia untuk berbagi informasi tentang praktek-praktek instruksional kreatif dan cerdas. Jelajahi blog kami, perangkat ajar, panduan, laporan resmi, dan banyak lagi.</p>
+                <div class="text-center my-10">
+                    <a href="#" class="bg-green-300 text-black px-5 py-3 rounded-md hover:bg-green-950 duration-200 hover:text-green-300 mx-auto text-center">Lihat lebih banyak</a>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center gap-10 max-md:flex-col">
+                <div class="rounded-md w-1/4 max-lg:w-1/3 border relative group max-md:mx-auto max-md:w-1/2">
+                    <a href="#">
+                        <img src="img/logo-sumber-1.jpeg" alt="logo-sumber-1" class="rounded-t-md">
+                        <div class="p-5">
+                            <p class="opacity-50">Video</p>
+                            <h2 class="text-2xl text-sky-900 my-3">Menggunakan literasi digital sebagai pendukung desain dan penyampaian penilaian otentik yang efektif</h2>
+                            <p class="mb-5">Dalam studi kasus ini, kami melihat penerapan Originality Check oleh Universitas Pelita Harapan (UPH).</p>
+                        </div>
+                        <div class="bg-green-300 absolute bottom-0 w-full text-center p-2">
+                            <a href="#" class="bg-green-300 hidden group-hover:block">Ketahui Lebih Jauh</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="rounded-md w-1/4 max-lg:w-1/3 border relative group max-md:mx-auto max-md:w-1/2">
+                    <a href="#">
+                        <img src="img/logo-sumber-2.jpeg" alt="logo-sumber-2" class="rounded-t-md">
+                        <div class="p-5">
+                            <p class="opacity-50">Webinar</p>
+                            <p class="text-lg"><b>Rabu 23 Juni 2021</b> 9:00 - 11:00 WIB</p>
+                            <h2 class="text-2xl text-sky-900 my-3">Mencapai Integritas Riset</h2>
+                            <p class="mb-5">Menerbitkan karya tulis dengan percaya diri akan keaslian naskahnya merupakan salah satu fondasi dari integritas riset.</p>
+                        </div>
+                        <div class="bg-green-300 absolute bottom-0 w-full text-center p-2">
+                            <a href="#" class="bg-green-300 hidden group-hover:block">Ketahui Lebih Jauh</a>
+                        </div>
+                    </a>
+                </div>
+                <div class="rounded-md w-1/4 max-lg:w-1/3 border relative group max-md:mx-auto max-md:w-1/2">
+                    <a href="#">
+                        <img src="img/logo-sumber-3.jpeg" alt="logo-sumber-3" class="rounded-t-md">
+                        <div class="p-5">
+                            <p class="opacity-50">Webinar</p>
+                            <p class="text-lg"><b>Rabu 23 Juni 2021</b> 9:00 - 11:00 WIB</p>
+                            <h2 class="text-2xl text-sky-900 my-3">Tips Menginterpretasikan Turnitin Similarity Report</h2>
+                            <p class="mb-5">Ingin memahami Turnitin Similarity Report lebih baik? Ikuti diskusi bersama Dr. Ide Bagus Siaputra, S.Psi.</p>
+                        </div>
+                        <div class="bg-green-300 absolute bottom-0 w-full text-center p-2">
+                            <a href="#" class="bg-green-300 hidden group-hover:block">Ketahui Lebih Jauh</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- solusi -->
+    <section>
+        <div>
+            <h1 class="text-5xl text-center text-sky-900 mx-auto mb-10 max-lg:text-3xl">Penyedia Solusi Integritas Akademik Terdepan</h1>
+            <div class="flex justify-center items-center flex-wrap gap-10 text-center max-md:flex-col">
+                <div class="w-1/4 max-lg:w-1/3">
+                    <h2 class=" my-5 text-3xl max-lg:text-xl">1 juta</h2>
+                    <p class="text-lg max-lg:text-base">penyerahan naskah per hari</p>
+                </div>
+                <div class="w-1/4 max-lg:w-1/3">
+                    <h2 class=" my-5 text-3xl max-lg:text-xl">7 triliun</h2>
+                    <p class="text-lg max-lg:text-base">frase di seluruh database kami</p>
+                </div>
+                <div class="w-1/4 max-lg:w-1/3">
+                    <h2 class=" my-5 text-3xl max-lg:text-xl">7 triliun</h2>
+                    <p class="text-lg max-lg:text-base">frase di seluruh database kami</p>
+                </div>
+                <div class="w-1/4 max-lg:w-1/3">
+                    <h2 class=" my-5 text-3xl max-lg:text-xl">81</h2>
+                    <p class="text-lg max-lg:text-base">dari 100 universitas top dunia</p>
+                </div>
+                <div class="w-1/4 max-lg:w-1/3">
+                    <h2 class=" my-5 text-3xl max-lg:text-xl">19</h2>
+                    <p class="text-lg max-lg:text-base">bahasa didukung</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- menu footer -->
+    <section>
+        <div class="flex flex-wrap justify-between py-20 px-10 gap-5 max-md:grid max-md:grid-cols-2">
+            <div class="max-lg:w-1/4">
+                <h3 class="text-lg font-semibold">Produk</h3>
+                <p><a href="#">Feedback Studio</a></p>
+                <p><a href="#">Gradescope</a></p>
+                <p><a href="#">Turnitin Originality</a></p>
+                <p><a href="#">Turnitin Similarity</a></p>
+                <p><a href="#">iThenticate</a></p>
+            </div>
+            <div class="max-lg:w-1/4">
+                <h3 class="text-lg font-semibold">Solusi</h3>
+                <p><a href="#">Pendidikan Tinggi</a></p>
+                <p><a href="#">Pendidikan Menengah</a></p>
+                <p><a href="#">Riset dan Publikasi</a></p>
+                <p><a href="#">Mitra</a></p>
+            </div>
+            <div class="max-lg:w-1/4">
+                <h3 class="text-lg font-semibold">Dukungan</h3>
+                <p><a href="#">Bantuan</a></p>
+                <p><a href="#">Status Sistem</a></p>
+                <p><a href="#">Pusat Dukungan</a></p>
+            </div>
+            <div class="max-lg:w-1/4">
+                <h3 class="text-lg font-semibold">Perusahaan</h3>
+                <p><a href="#">Tentang</a></p>
+                <p><a href="#">Karir</a></p>
+                <p><a href="#">Blog</a></p>
+                <p><a href="#">Aksebilitas</a></p>
+                <p><a href="#">Privasi</a></p>
+            </div>
+            <div class="max-lg:w-1/4">
+                <h3 class="text-lg font-semibold">Media Sosial</h3>
+                <p><a href="#">Facebook</a></p>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">LinkedIn</a></p>
+                <p><a href="#">Twitter</a></p>
+            </div>
+            <div class="w-1/5 max-lg:w-1/4">
+                <img src="img/turnitin_logo.png" alt="turnitin_logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="bg-sky-950 p-10 max-md:text-xs max-md:p">
+            <div class="text-white flex gap-5">
+                <a href="#">Terms of Use</a>
+                <a href="#">Website Privacy</a>
+                <a href="#">Modern Slavery Act</a>
+                <a href="#">Cookies Settings</a>
+                <p>© 2023 PT. Turnitin Education Indonsesia. Hak cipta dilindungi undang-undang.</p>
+            </div>
+            <div>
+                <label for="region" class="text-white">Region: </label>
+                <select name="region" id="region">
+                    <option>-- Select a region --</option>
+                    <option>United States & Canada</option>
+                    <option>United Kingdom</option>
+                    <option>Asia Pacific</option>
+                    <option>Latin America & Caribbean</option>
+                    <option>Europe</option>
+                    <option>Middle East</option>
+                    <option>Africa</option>
+                    <option>International</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <!-- cookies -->
+    <section>
+        <div class="fixed bottom-3 left-3 flex items-center gap-3 group z-50">
+            <i class="fa-solid fa-shield-halved bg-sky-300 text-4xl p-2 rounded-xl cursor-pointer" style="color: #ffffff;"></i>
+            <p class="bg-gray-500 text-white p-1 rounded-md hidden group-hover:block">Cookies Settings</p>
+        </div>
+    </section>
+
+    <!-- btn kontak penjual -->
+    <section>
+        <button class="bg-green-300 px-3 py-2 shadow-xl hover:bg-green-950 hover:text-green-300 duration-300 fixed bottom-0 w-full hidden max-md:block" id="btnPenjual">Kontak Penjual</button>
+    </section>
+
+    <!-- script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
